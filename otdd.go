@@ -169,7 +169,7 @@ func getServerTLSOption(credential, privateKey, caCertificate string) (grpc.Serv
 // NewOtddAdapter creates a new IBP adapter that listens at provided port.
 func NewOtddAdapter(addr string) (Server, error) {
 	if addr == "" {
-		addr = "35480"
+		addr = "18764"
 	}
 	listener, err := net.Listen("tcp", fmt.Sprintf(":%s", addr))
 	if err != nil {
