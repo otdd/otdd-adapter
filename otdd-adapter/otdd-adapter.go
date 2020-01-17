@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"os"
 
-	otdd "istio.io/istio/mixer/adapter/otdd"
+	otdd "otdd.io/otdd-adapter"
 )
 
 func main() {
