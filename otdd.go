@@ -81,7 +81,7 @@ func (s *OtddAdapter) HandleLogEntry(ctx context.Context, r *logentry.HandleLogE
 	for _, instance := range r.Instances {
 		testCase := decodeValue(instance.Variables["testcase"].Value)
 		fmt.Println("testcase: ",testCase)
-		ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+		ctx, cancel := context.WithTimeout(context.Background(), 3 * time.Second)
         	defer cancel()
         	_,err := grpcClient.SaveTestCase(ctx,&otdd.SaveTestCaseReq{TestCase:testCase.(string)})
 		if err != nil {

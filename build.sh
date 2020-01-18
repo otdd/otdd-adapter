@@ -1,1 +1,1 @@
-go build -o otdd-adapter cmd/otdd-adapter.go 
+go build -o otdd-adapter otdd-adapter/otdd-adapter.go 
