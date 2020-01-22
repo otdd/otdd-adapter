@@ -1,7 +1,4 @@
-FROM golang
-RUN mkdir -p /go/src/otdd.io/otdd-adapter
-ADD . /go/src/otdd.io/otdd-adapter
-WORKDIR /go/src/otdd.io/otdd-adapter
-RUN go get ./...
-RUN go install -v ./... 
-CMD ["/go/bin/otdd-adapter"]
+FROM centos:7
+COPY ./otdd-adapter/otdd-adapter /usr/local/bin/
+WORKDIR /usr/local/bin/
+CMD ["/usr/local/bin/otdd-adapter"]

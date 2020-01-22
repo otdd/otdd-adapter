@@ -8,8 +8,9 @@ spec:
  connection:
    address: "[::]:18764" #replaces at runtime by the test
  params:
-   addr: "10.10.40.149:8764"
-#   addr: "192.168.1.26:8764"
+#   addr: "10.10.40.149:8764"
+   addr: "192.168.1.26:8764"
+#   addr: "192.168.1.101:8764"
 ---
 
 # instance for template metric
